@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/mssv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingTop="20dp"
+        android:text="MSSV"
+        app:layout_constraintLeft_toLeftOf="@id/main"
+        app:layout_constraintTop_toTopOf="@id/main" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingTop="20dp"
+        android:text="Ho Ten"
+        app:layout_constraintLeft_toLeftOf="@id/main"
+        app:layout_constraintTop_toBottomOf="@id/mssv" />
+
+    <TextView
+        android:id="@+id/classroom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingTop="20dp"
+        android:text="Lop"
+        app:layout_constraintLeft_toLeftOf="@id/main"
+        app:layout_constraintTop_toBottomOf="@id/name" />
+
+    <EditText
+        android:id="@+id/input_mssv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/mssv"
+        app:layout_constraintLeft_toRightOf="@id/name"
+        app:layout_constraintRight_toRightOf="@id/main" />
+
+    <EditText
+        android:id="@+id/input_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/name"
+        app:layout_constraintLeft_toRightOf="@id/name"
+        app:layout_constraintRight_toRightOf="@id/main" />
+
+    <EditText
+        android:id="@+id/input_classroom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/classroom"
+        app:layout_constraintLeft_toRightOf="@id/name"
+        app:layout_constraintRight_toRightOf="@id/main" />
+
+    <Button
+        android:id="@+id/button_insert"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Insert"
+        app:layout_constraintLeft_toLeftOf="@id/main"
+        app:layout_constraintRight_toLeftOf="@id/button_del"
+        app:layout_constraintTop_toBottomOf="@id/classroom" />
+
+    <Button
+        android:id="@+id/button_del"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="Delete"
+        app:layout_constraintLeft_toRightOf="@id/button_insert"
+        app:layout_constraintRight_toRightOf="@id/main"
+        app:layout_constraintTop_toTopOf="@id/button_insert" />
+
+    <Button
+        android:id="@+id/button_update"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Update"
+        app:layout_constraintLeft_toLeftOf="@id/main"
+        app:layout_constraintRight_toLeftOf="@id/button_query"
+        app:layout_constraintTop_toBottomOf="@id/button_insert" />
+
+    <Button
+        android:id="@+id/button_query"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Query"
+        app:layout_constraintLeft_toRightOf="@id/button_update"
+        app:layout_constraintRight_toRightOf="@id/main"
+        app:layout_constraintTop_toBottomOf="@id/button_del" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/button_update" />
+</androidx.constraintlayout.widget.ConstraintLayout>
